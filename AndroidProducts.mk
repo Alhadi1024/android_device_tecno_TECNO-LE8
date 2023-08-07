@@ -8,3 +8,5 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_TECNO-LE8.mk
 
+COMMON_LAUNCH_CHOICES := \
+      twrp_LE8-eng
