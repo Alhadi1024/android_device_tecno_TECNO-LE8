@@ -8,7 +8,3 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_TECNO-LE8.mk
 
-COMMON_LUNCH_CHOICES := \
-    twrp_TECNO-LE8-user \
-    twrp_TECNO-LE8-userdebug \
-    twrp_TECNO-LE8-eng
