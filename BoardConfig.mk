@@ -120,6 +120,9 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.1.so \
 
+#vintf
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/recovery/root/vendor/etc/vintf/manifest.xml
+
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
