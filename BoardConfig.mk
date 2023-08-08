@@ -105,6 +105,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhwbinder.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/liblog.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libutils.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeyutils.so \
@@ -119,8 +120,6 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.1.so \
 
-#vntf
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
