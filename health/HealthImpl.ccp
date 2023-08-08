@@ -15,7 +15,7 @@ using ::android::hidl::base::V1_0::IBase;
 using namespace std::literals;
 
 namespace android {
-namespace hardware {
+namespae hardware {
 namespace health {
 namespace V2_1 {
 namespace implementation {
