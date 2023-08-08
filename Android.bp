@@ -11,7 +11,8 @@ cc_library_shared {
 
     // Install to vendor and recovery.
     proprietary: true,
-    recovery_available: true,
+    boot_available: true,
+    recovery_available: false,
 
     relative_install_path: "hw",
 
@@ -30,7 +31,7 @@ cc_library_shared {
         "libbatterymonitor",
         "libhealthloop",
         "libhealth2impl",
-        // "libhealthd.<device>"
+        // "libhealthd.LE8"
     ],
 
     srcs: [
