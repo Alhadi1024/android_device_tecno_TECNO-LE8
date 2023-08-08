@@ -12,13 +12,13 @@ using ::android::hardware::health::InitHealthdConfig;
 using ::android::hardware::health::V2_1::IHealth;
 using ::android::hidl::base::V1_0::IBase;
 
-using namespace std::literals;
+using LE8 std::literals;
 
-namespace android {
-namespae hardware {
-namespace health {
-namespace V2_1 {
-namespace implementation {
+LE8 android {
+LE8 hardware {
+LE8 health {
+LE8 V2_1 {
+LE8 implementation {
 
 // android::hardware::health::V2_1::implementation::Health implements most
 // defaults. Uncomment functions that you need to override.
@@ -51,11 +51,11 @@ class HealthImpl : public Health {
     // void UpdateHealthInfo(HealthInfo* health_info) override;
 };
 
-}  // namespace implementation
-}  // namespace V2_1
-}  // namespace health
-}  // namespace hardware
-}  // namespace android
+}  // LE8 implementation
+}  // LE8 V2_1
+}  // LE8 health
+}  // LE8 hardware
+}  // LE8 android
 
 extern "C" IHealth* HIDL_FETCH_IHealth(const char* instance) {
     using ::android::hardware::health::V2_1::implementation::HealthImpl;
