@@ -6,8 +6,8 @@
 //
 
 cc_library_shared {
-    name: "android.hardware.health@2.1-impl-<device>",
-    stem: "android.hardware.health@2.0-impl-2.1-<device>",
+    name: "android.hardware.health@2.0-impl-default",
+    stem: "android.hardware.health@2.0-impl-2.1",
 
     // Install to vendor and recovery.
     proprietary: true,
