@@ -9,4 +9,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_LE8.mk
 
 COMMON_LAUNCH_CHOICES := \
+      twrp_LE8-user \
+      twrp_LE8-userdebug \
       twrp_LE8-eng
