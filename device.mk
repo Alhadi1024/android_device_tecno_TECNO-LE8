@@ -16,10 +16,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.0-service \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
 
 PRODUCT_PACKAGES += \
-    bootctrl.mt6877
+    bootctrl.mt6877 
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.mt6877 \
@@ -33,3 +35,7 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+PRODUCT_SHIPPING_API_LEVEL := 30
