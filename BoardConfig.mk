@@ -9,9 +9,6 @@ DEVICE_PATH := device/tecno/LE8
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -104,25 +101,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libhwbinder.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/liblog.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libutils.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeyutils.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libext4_utils.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libhidlbase.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.fastboot@1.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libcutils.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libbase.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)android.hardware.boot@1.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.1.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@1.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.1.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
-#vintf
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/recovery/root/vendor/etc/vintf/manifest.xml
-
+#vntf
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01

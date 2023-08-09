@@ -17,17 +17,20 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
+    android.hardware.boot@1.1-mtkimpl.recovery \
+    
+#Fastbootd
+PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6877 
+    
+# MTK Plpath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.mt6877 \
-    libgptutils \
-    libz \
-    libcutils
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -35,7 +38,13 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+    
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
